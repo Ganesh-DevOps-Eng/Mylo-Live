@@ -14,7 +14,7 @@ resource "aws_instance" "bastion" {
   key_name = aws_key_pair.bastion_pair.key_name
 }
 
-resource "aws_instance" "bastion" {
+resource "aws_instance" "bastion_ec2" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
   subnet_id              = module.VPC-Module.subnet-private[0]
